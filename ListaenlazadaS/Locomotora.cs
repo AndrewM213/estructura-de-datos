@@ -48,12 +48,12 @@ namespace ListaEnlazadaS
         }
         public void EliminarUltimo()
         {
-            Vagon temp = this.Primero;
-            while (temp.Sig.Sig != null)
+            Vagon vagon = this.Primero;
+            while (vagon.Sig.Sig != null)
             {
-                temp = temp.Sig;
+                vagon = vagon.Sig;
             }
-            temp.Sig = null;
+            vagon.Sig = null;
         }
         public void EliminarPrimero()
         {
