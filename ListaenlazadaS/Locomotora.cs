@@ -46,6 +46,19 @@ namespace ListaEnlazadaS
 
 
         }
+        public void EliminarUltimo()
+        {
+            Vagon temp = this.Primero;
+            while (temp.Sig.Sig != null)
+            {
+                temp = temp.Sig;
+            }
+            temp.Sig = null;
+        }
+        public void EliminarPrimero()
+        {
+            this.Primero = this.Primero.Sig;
+        }
         public string VerVagones()
         {
             string ListaVag = "";
